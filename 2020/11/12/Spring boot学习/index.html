@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>HTML入门笔记 | 我爱学习</title>
+  <title>我爱学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="helloworld">
+  <meta name="description" content="Spring boot学习一个功能： 浏览器发送hello请求，服务器接收请求并处理，响应Hello World字符串； 1.创建一个maven工程；2.导入spring boot的相关依赖；1234567&lt;dependencies&gt;        &lt;dependency&gt;            &lt;groupId&gt;org.springframework.boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML入门笔记">
-<meta property="og:url" content="http://example.com/2018/11/23/helloworld/index.html">
+<meta property="og:title" content="我爱学习">
+<meta property="og:url" content="http://example.com/2020/11/12/Spring%20boot%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="我爱学习">
-<meta property="og:description" content="helloworld">
+<meta property="og:description" content="Spring boot学习一个功能： 浏览器发送hello请求，服务器接收请求并处理，响应Hello World字符串； 1.创建一个maven工程；2.导入spring boot的相关依赖；1234567&lt;dependencies&gt;        &lt;dependency&gt;            &lt;groupId&gt;org.springframework.boot">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-11-23T13:07:15.000Z">
-<meta property="article:modified_time" content="2020-11-11T07:58:56.236Z">
+<meta property="article:published_time" content="2020-11-12T01:45:23.427Z">
+<meta property="article:modified_time" content="2020-11-12T01:45:23.427Z">
 <meta property="article:author" content="shinobu">
-<meta property="article:tag" content="HTML">
-<meta property="article:tag" content="前端">
+<meta property="article:tag" content="三维点云,python,java,c++,springboot,leefcode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="我爱学习" type="application/atom+xml">
@@ -154,36 +153,18 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-helloworld" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring boot学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-     <header class="article-header">
-  
-  
-    <h1 class="article-title" itemprop="name">
-      HTML入门笔记
-    </h1>
-  
-
-  
-  <a href="/2018/11/23/helloworld/" class="archive-article-date">
-  	<time datetime="2018-11-23T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
-</a>
-  
-    
-    
-  
-    <span class="archive-article-date">
-        阅读量 <span id="busuanzi_value_page_pv"></span>
-    </span>
-  
-    
-    
-</header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="helloworld"><a href="#helloworld" class="headerlink" title="helloworld"></a>helloworld</h1>
+        <h1 id="Spring-boot学习"><a href="#Spring-boot学习" class="headerlink" title="Spring boot学习"></a>Spring boot学习</h1><p>一个功能：</p>
+<p>浏览器发送hello请求，服务器接收请求并处理，响应Hello World字符串；</p>
+<h2 id="1-创建一个maven工程；"><a href="#1-创建一个maven工程；" class="headerlink" title="1.创建一个maven工程；"></a>1.创建一个maven工程；</h2><h2 id="2-导入spring-boot的相关依赖；"><a href="#2-导入spring-boot的相关依赖；" class="headerlink" title="2.导入spring boot的相关依赖；"></a>2.导入spring boot的相关依赖；</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-编写一个主程序"><a href="#3-编写一个主程序" class="headerlink" title="3.编写一个主程序"></a>3.编写一个主程序</h2><h2 id="4-编写相关的controller和service"><a href="#4-编写相关的controller和service" class="headerlink" title="4.编写相关的controller和service"></a>4.编写相关的controller和service</h2>
       
 
       
@@ -212,37 +193,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端/HTML//" class="article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -292,7 +243,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2018/11/23/helloworld/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/12/Spring%20boot%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,15 +257,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/12/Spring%20boot%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2018/11/23/helloworld/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML入门笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -331,19 +278,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#helloworld"><span class="toc-number">1.</span> <span class="toc-text">helloworld</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
