@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>article | 我爱学习</title>
+  <title>数据结构 | 我爱学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="article">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="一.队列1.简介 ​        如上图所示，队列是典型的 FIFO(First Input First Out) 数据结构。插入（insert）操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除（delete）操作也被称为出队（dequeue)。 你只能移除第一个元素。      ​        在超市购物之后会提着我们满满的购物车来到收银台排在结账队伍的最后，眼睁睁地看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="http://example.com/2018/11/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="我爱学习">
-<meta property="og:description" content="个人技术博客">
+<meta property="og:description" content="一.队列1.简介 ​        如上图所示，队列是典型的 FIFO(First Input First Out) 数据结构。插入（insert）操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除（delete）操作也被称为出队（dequeue)。 你只能移除第一个元素。      ​        在超市购物之后会提着我们满满的购物车来到收银台排在结账队伍的最后，眼睁睁地看">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-06-11T02:13:21.000Z">
-<meta property="article:modified_time" content="2020-11-11T08:06:30.009Z">
+<meta property="og:image" content="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/08/14/screen-shot-2018-05-03-at-151021.png">
+<meta property="og:image" content="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/21/screen-shot-2018-07-21-at-153713.png">
+<meta property="article:published_time" content="2018-11-23T13:07:15.000Z">
+<meta property="article:modified_time" content="2021-09-15T12:50:23.660Z">
 <meta property="article:author" content="shinobu">
-<meta property="article:tag" content="三维点云,python,java,c++,springboot,leefcode">
+<meta property="article:tag" content="数据结构，算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/08/14/screen-shot-2018-05-03-at-151021.png">
   
     <link rel="alternative" href="/atom.xml" title="我爱学习" type="application/atom+xml">
   
@@ -153,20 +156,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-数据结构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
      <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      article
+      数据结构
     </h1>
   
 
   
-  <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2018-06-11T02:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
+  <a href="/2018/11/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
+  	<time datetime="2018-11-23T13:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-23</time>
 </a>
   
     
@@ -182,7 +185,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="一-队列"><a href="#一-队列" class="headerlink" title="一.队列"></a>一.队列</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/08/14/screen-shot-2018-05-03-at-151021.png" alt="img"></p>
+<p>​        如上图所示，队列是典型的 FIFO(First Input First Out) 数据结构。插入（insert）操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除（delete）操作也被称为出队（dequeue)。 你只能移除第一个元素。     </p>
+<p>​        在超市购物之后会提着我们满满的购物车来到收银台排在结账队伍的最后，眼睁睁地看着前面的客户一个个离开。这就是一种先进先出机制，先排队的客户先行结账离开。</p>
+<h2 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h2><h3 id="顺序队列"><a href="#顺序队列" class="headerlink" title="顺序队列"></a>顺序队列</h3><p>​        为了实现队列，我们可以使用动态数组和指向队列头部的索引。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> List&lt;Integer&gt; data;         </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> p_start;            </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        data = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        p_start = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">enQueue</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        data.add(x);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;;    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">deQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty() == <span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        p_start++;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data.get(p_start);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> p_start &gt;= data.size();</span><br><span class="line">    &#125;     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​      可以很明显看出在建立顺序队列结构时必须为其静态分配或动态申请一片连续的存储空间，并设置两个指针进行管理。一个是队头指针front，它指向队头元素；另一个是队尾指针rear，它指向下一个入队元素的存储位置，每次在队尾插入一个元素是，rear增1；每次在队头删除一个元素时，front增1。随着插入和删除操作的进行，队列元素的个数不断变化，队列所占的存储空间也在为队列结构所分配的连续空间中移动。当front=rear时，队列中没有任何元素，称为空队列。当rear增加到指向分配的连续空间之外时，队列无法再插入新元素，但这时往往还有大量可用空间未被占用，这些空间是已经出队的队列元素曾经占用过得存储单元。如下图所示，</p>
+<p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/21/screen-shot-2018-07-21-at-153713.png" alt="img"></p>
+<p>​        不难看出，顺序队列结构由于入队和出队操作中，头尾指针只增加不减小，致使被删元素的空间永远无法重新利用，这就会造成极大的存储资源浪费，会出现“<strong>假上溢</strong>”现象。</p>
+<p>​        所以在实际使用队列时，为了使队列空间能重复使用，往往对队列的使用方法稍加改进：无论插入或删除，一旦rear指针增1或front指针增1 时超出了所分配的队列空间，就让它指向这片连续空间的起始位置。这种队列叫做<strong>循环队列</strong>。</p>
+<hr>
+<h3 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h3><p>​         循环队列是一种线性数据结构，其操作表现基于 FIFO（先进先出）原则并且队尾被连接在队首之后以形成一个循环。它也被称为“环形缓冲器”。使用循环队列，可以使用由于出队操作而产生的未利用空间。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.reflect.Array;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCircularQueue</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] data;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> front,rear,size,num;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyCircularQueue</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        data=<span class="keyword">new</span> <span class="keyword">int</span>[k];</span><br><span class="line">        front=<span class="number">0</span>;</span><br><span class="line">        rear=-<span class="number">1</span>;</span><br><span class="line">        size=k;</span><br><span class="line">        num=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//入队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">enQueue</span><span class="params">(<span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(isFull()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        rear=(rear+<span class="number">1</span>)%size;</span><br><span class="line">        data[rear]=value;</span><br><span class="line">        num++;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//出队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">deQueue</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(isEmpty())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        front=(front+<span class="number">1</span>)%size;</span><br><span class="line">        num--;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Front</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(isEmpty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[front];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Rear</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[rear];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num==<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num==size;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><p>大多数流行语言都提供内置的队列库，如下所示，值得一提的是，Java中不能直接创建固定长度的队列，想要限制，只要自己用list.getSize()得到长度从而进行限制。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.sun.javafx.scene.control.SizeLimitedList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Queue&lt;Integer&gt; queue= <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.offer(<span class="number">1</span>);<span class="comment">//往队列添加元素如果队列已满直接返回false,队列未满则直接插入并返回true;</span></span><br><span class="line">        queue.add(<span class="number">1</span>);<span class="comment">//对offer()方法的简单封装.如果队列已满,抛出异常new IllegalStateException(&quot;Queue full&quot;);</span></span><br><span class="line">        queue.poll();<span class="comment">//取出并删除队头的元素,当队列为空,返回null;</span></span><br><span class="line">        queue.peek();<span class="comment">//直接取出队头元素，不删除;</span></span><br><span class="line">        queue.element();<span class="comment">//对peek方法进行简单封装,如果队头元素存在则取出并不删除,如果不存在抛出异常NoSuchElementException()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-队列与BFS（广度优先算法）"><a href="#4-队列与BFS（广度优先算法）" class="headerlink" title="4.队列与BFS（广度优先算法）"></a>4.队列与BFS（广度优先算法）</h2><p>​        广度优先搜索（BFS）的一个常见应用是找出从根结点到目标结点的最短路径。与树的层序遍历类似，越是接近根结点的结点将越早地遍历。在进行BFS算法时，首先将根结点排入队列。然后我们逐个处理已经在队列中的结点，将该结点的邻居结点添加到队列中。结点的处理顺序与它们添加到队列的顺序是完全相同的顺序，即先进先出（FIFO）。</p>
+<p>​        BFS算法的两种适用环境：遍历和最短路径。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回到目标的最短路径长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(Node root, Node target)</span> </span>&#123;</span><br><span class="line">    Queue&lt;Node&gt; queue;  <span class="comment">// 保存所有等待访问的结点</span></span><br><span class="line">    <span class="keyword">int</span> step = <span class="number">0</span>;       <span class="comment">//距离开始的距离</span></span><br><span class="line">    </span><br><span class="line">    add root to queue;</span><br><span class="line">    <span class="comment">// BFS</span></span><br><span class="line">    <span class="keyword">while</span> (queue is not empty) &#123;</span><br><span class="line">        step = step + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;	<span class="comment">//遍历当前队列中所有结点，并将下一层结点放入队列</span></span><br><span class="line">            Node cur = the first node in queue;</span><br><span class="line">            <span class="keyword">return</span> step <span class="keyword">if</span> cur is target;</span><br><span class="line">            <span class="keyword">for</span> (Node next : the neighbors of cur) &#123;</span><br><span class="line">                add next to queue;</span><br><span class="line">            &#125;</span><br><span class="line">            remove the first node from queue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;   <span class="comment">//没有查找到</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有时，确保我们永远不会访问一个结点两次很重要。否则，我们可能陷入无限循环。如果是这样，我们可以在上面的代码中添加一个哈希集来解决这个问题。这是修改后的伪代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回到目标的最短路径长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BFS</span><span class="params">(Node root, Node target)</span> </span>&#123;</span><br><span class="line">    Queue&lt;Node&gt; queue;  <span class="comment">//保存所有等待访问的结点</span></span><br><span class="line">    Set&lt;Node&gt; used;     <span class="comment">//保存访问过的结点</span></span><br><span class="line">    <span class="keyword">int</span> step = <span class="number">0</span>;       <span class="comment">//距离开始的距离</span></span><br><span class="line">    </span><br><span class="line">    add root to queue;</span><br><span class="line">    add root to used;</span><br><span class="line">    <span class="comment">// BFS</span></span><br><span class="line">    <span class="keyword">while</span> (queue is not empty) &#123;</span><br><span class="line">        step = step + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;	<span class="comment">//遍历当前队列中所有结点，并将下一层结点放入队列</span></span><br><span class="line">            Node cur = the first node in queue;</span><br><span class="line">            <span class="keyword">return</span> step <span class="keyword">if</span> cur is target;</span><br><span class="line">            <span class="keyword">for</span> (Node next : the neighbors of cur) &#123;</span><br><span class="line">                <span class="keyword">if</span> (next is not in used) &#123;	<span class="comment">//判断是否访问过</span></span><br><span class="line">                    add next to queue;</span><br><span class="line">                    add next to used;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            remove the first node from queue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;          <span class="comment">//没有结果</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -211,7 +240,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构，算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -261,7 +312,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2018/11/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,6 +324,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/08/09/2021-9-14%20java%E5%9F%BA%E7%A1%80%20/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          javaSE学习笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -287,10 +352,53 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E9%98%9F%E5%88%97"><span class="toc-number">1.</span> <span class="toc-text">一.队列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.</span> <span class="toc-text">2.实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E9%98%9F%E5%88%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">顺序队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">循环队列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3.使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%98%9F%E5%88%97%E4%B8%8EBFS%EF%BC%88%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">4.队列与BFS（广度优先算法）</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+      <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: 'your clientID',
+  clientSecret: 'your clientSecret',
+  repo: 'git_comment',
+  owner: 'findtheonlyway',
+  admin: ['erbiduo'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -341,7 +449,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
